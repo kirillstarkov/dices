@@ -1,0 +1,42 @@
+.spellCard {
+}
+
+.componentsWithBG {
+  background-color: var(--inverted-bg-color);
+  padding: 0 4px;
+  font-size: var(--font-s);
+  border-radius: 4px;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.components {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+
+  & p {
+    min-width: 13px;
+    min-height: 14px;
+    text-align: center;
+    font-size: var(--font-xs);
+    position: relative;
+  }
+}
+
+.dot::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  top: calc(50% - 2.5px);
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  background-color: var(--primary-color);
+}

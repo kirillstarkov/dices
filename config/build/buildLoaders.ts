@@ -2,12 +2,13 @@ import {BuildOptions} from "./types/config";
 import webpack from "webpack";
 import {buildBabelLoader} from "./loaders/buildBabelLoader";
 import {buildCssLoader} from "./loaders/buildCssLoader";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const { isDev } = options;
     const svgLoader = {
         test: /\.svg$/,
-        use: ["@svgr/webpack"],
+        use: ['@svgr/webpack'],
     };
 
     const babelLoader = buildBabelLoader(options);
@@ -24,7 +25,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         test: /\.(png|jpe?g|gif)$i/,
         use: [
             {
-                loader: 'file-loader'
+                loader: 'file-loader',
             },
         ],
     };

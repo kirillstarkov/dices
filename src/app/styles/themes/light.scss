@@ -1,0 +1,21 @@
+.app_light_theme {
+  --bg-color: #fff6e7;
+  --inverted-bg-color: #321f38;
+
+  --primary-color: #1b1525;
+  --primary-color-trans: rgba(27, 21, 37, 0.5);
+  //--secondary-color: #0232c2;
+  --inverted-primary-color: #d8acff;
+  //--inverted-secondary-color: #04ff04;
+
+  // skeleton
+  //--skeleton-color: #fff;
+  //--skeleton-shadow: rgba(0, 0, 0, 20%);
+
+  //code
+  //--code-bg: #fff;
+  //
+  --card-bg: #bdb287;
+  --border-main: 1px solid rgba(27, 21, 37, 0.2);
+  --bg-image: url("shared/assets/images/light-bg.png");
+}

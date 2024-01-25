@@ -1,0 +1,22 @@
+.app_dark_theme {
+  //--bg-color: #25202a;
+  --bg-color: #232423;
+  --inverted-bg-color: #8c824e;
+
+  --primary-color: #e8dfc5;
+  --primary-color-trans: rgba(215, 215, 215, 0.5);
+  //--secondary-color: #008e00;
+  --inverted-primary-color: #493f39;
+  //--inverted-secondary-color: #0051ff;
+
+  // skeleton
+  //--skeleton-color: #1515ad;
+  //--skeleton-shadow: #2b2be8;
+
+  //code
+  //--code-bg: #1212a1;
+  //
+  --border-main: 1px solid rgba(232, 223, 197, 0.2);
+  --card-bg: #3a3830;
+  --bg-image: url("shared/assets/images/dark-bg.png");
+}

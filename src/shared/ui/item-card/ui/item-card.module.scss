@@ -1,0 +1,45 @@
+.itemCard {
+  display: flex;
+  align-items: center;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 4px 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 33%;
+
+  @media screen and (min-width: 768px){
+    width: auto;
+    flex: 1 1 300px;
+  }
+}
+
+.leftBlock{
+  border-right: 1px solid var(--primary-color);
+  padding-right: 8px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 32px;
+  min-width: 32px;
+}
+
+.textBlock {
+  width: calc(100% - 32px);
+  overflow: hidden;
+}
+
+.title {
+  font: var(--font-m);
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.description {
+  opacity: 0.8;
+  font: var(--font-s);
+}

@@ -1,0 +1,17 @@
+.navbar {
+  //height: 100vh;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  background-color: var(--card-bg);
+  //position: fixed;
+  //left: 0;
+  order: 1;
+  height: 56px;
+
+  @media screen and (min-width: 768px) {
+    order: 0;
+    width: 52px;
+    min-width: 52px;
+    height: 100%;
+    min-height: 100%;
+  }
+}
