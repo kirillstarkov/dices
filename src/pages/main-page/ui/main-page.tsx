@@ -40,9 +40,6 @@ const MainPage = () => {
           <LinkCard to={RoutePath.bestiary} className={cls.linkCard}>
             Бестіарій
           </LinkCard>
-          <LinkCard to={"asdasdasfgasf"} className={cls.linkCard}>
-            ПІТИ НАХУЙ
-          </LinkCard>
         </div>
       </Page>
   );

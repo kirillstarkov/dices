@@ -6,8 +6,8 @@ const NotFoundPage = () => {
 
   return (
       <Page>
-        <h2>ЦІЄЇ СТОРІНКИ НЕМАЄ ПОСМОКЧИ ПЛЕЗ</h2>
-        <LinkCard to={RoutePath.main}>ДАВАЙ НАЗАД НАХУЙ</LinkCard>
+        <h2>Сторінку не знайдено</h2>
+        <LinkCard to={RoutePath.main}>На головну</LinkCard>
       </Page>
   );
 };
