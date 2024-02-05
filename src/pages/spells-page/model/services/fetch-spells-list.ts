@@ -13,7 +13,7 @@ export const fetchSpellsList = createAsyncThunk<Spell[], FetchSpellsListProps, T
       const {extra, rejectWithValue} = thunkApi;
       const { text } = props
       try {
-        const response = await extra.api.get<string>('/zaklinaniya-srd-phantom.db', {
+        const response = await extra.api.get<string>('/spells-dices.db', {
           params: {
 
           }

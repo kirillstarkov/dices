@@ -1,0 +1,52 @@
+.contentSide {
+}
+
+.left {
+  width: 100%;
+
+  &.active {
+    width: 40%;
+  }
+}
+
+.right {
+  margin-left: auto;
+  position: sticky;
+  top: 40px;
+  width: calc(60% - 24px);
+  height: calc(var(--screen-h) - 24px - 24px);
+  background-color: var(--card-bg-hover);
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.content {
+  margin: 0 24px;
+}
+
+.closeButton {
+  position: relative;
+  width: 20px;
+
+  &::before, &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+  }
+
+  &::before {
+    transform: rotateZ(45deg);
+  }
+
+  &::after {
+    transform: rotateZ(-45deg);
+  }
+}
