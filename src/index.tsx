@@ -1,10 +1,17 @@
-import { render } from "react-dom";
 import App from "./app/App";
 import {ThemeProvider} from "app/providers/theme-provider";
 import { BrowserRouter } from "react-router-dom";
 import {StoreProvider} from "store/ui/store-provider";
+import { createRoot } from 'react-dom/client';
 
-render(
+
+const container = document.getElementById('root');
+if(!container) {
+  throw new Error('Root container not found')
+}
+const root = createRoot(container);
+
+root.render(
     <BrowserRouter>
       <StoreProvider>
         <ThemeProvider>
@@ -12,6 +19,5 @@ render(
         </ThemeProvider>
       </StoreProvider>
     </BrowserRouter>
-    ,
-    document.getElementById('root'),
-    );
+);
+

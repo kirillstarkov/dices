@@ -6,7 +6,13 @@
   padding: 4px 12px;
   overflow: hidden;
   width: 100%;
-  max-width: 33%;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: var(--card-bg-hover);
+    transition: background-color .3s;
+
+  }
 
   @media screen and (min-width: 768px){
     width: auto;

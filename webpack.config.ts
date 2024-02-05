@@ -14,7 +14,7 @@ export default (env: BuildEnv) => {
 
     const mode = env.mode || 'development';
     const PORT = env.port || 3000;
-    const apiUrl = env.apiUrl || 'https://raw.githubusercontent.com/Lomniko/FoundryVTT-DnD5e-PHantom/master/packs';
+    const apiUrl = env.apiUrl || 'https://raw.githubusercontent.com/kirillstarkov/dnd-pack-ua/main/packs';
 
     const isDev = mode === 'development';
 

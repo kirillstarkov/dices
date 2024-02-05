@@ -8,7 +8,7 @@ export const ItemCard: FC<ItemCardType> = memo((props: ItemCardType) => {
   const {title, description, leftBlock, onClick, className} = props;
 
   return (
-      <div className={cn(className, cls.itemCard)} onClick={onClick}>
+      <div className={cn(cls.itemCard, className)} onClick={onClick}>
         {leftBlock &&
           <div className={cls.leftBlock}>
             <div>{leftBlock}</div>
