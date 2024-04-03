@@ -31,13 +31,48 @@ body {
 
 .container {
   width: 100%;
-  height: var(--screen-h);
+  height: calc(100vh - 56px);
   position: relative;
-  margin: auto;
   overflow: auto;
   padding: 0 16px;
+
+  @media screen and (min-width: 768px){
+    height: var(--screen-h);
+    padding: 0 16px;
+  }
 }
 
 .content-page {
   display: flex;
 }
+
+.center {
+  text-align: center;
+}
+
+.agi {
+  font-weight: 600;
+  color: var(--agility);
+}
+.str {
+  font-weight: 600;
+  color: var(--strength);
+}
+.const {
+  font-weight: 600;
+  color: var(--const);
+}
+.int {
+  font-weight: 600;
+  color: var(--int);
+}
+.wis {
+  font-weight: 600;
+  color: var(--wis);
+}
+.char {
+  font-weight: 600;
+  color: var(--char);
+}
+
+

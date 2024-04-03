@@ -1,1 +1,1 @@
-export { Spell } from './model/types/spell.type'
+export type { Spell } from './model/types/spell.type'

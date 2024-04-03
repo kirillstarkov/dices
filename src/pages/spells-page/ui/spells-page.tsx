@@ -23,16 +23,17 @@ const SpellsPage = () => {
   const isLoading = useSelector(getSpellsPageIsLoading)
   const spells = useSelector(getSpells.selectAll)
   const [search, setSearch] = useState<string>("")
+  const [filteredSpells, setFilteredSpells] = useState(spells)
   const [activeSpell, setActiveSpell] = useState<Spell>()
   const onChange = (value: string) => {
     setSearch(value)
   }
 
-  // const onSearchHandler = () => {
-  //   spells.filter((e) => {
-  //     return e.name.toLowerCase().includes(search.toLowerCase())
-  //   })
-  // }
+  const onSearchHandler = () => {
+    setFilteredSpells(spells.filter((e) => {
+      return e.name.toLowerCase().includes(search.toLowerCase())
+    }))
+  }
   //
   // const onLevelSort = () => {
   //  spells.sort((a, b) => {
@@ -45,9 +46,13 @@ const SpellsPage = () => {
   //   })
   // }
   useEffect(() => {
+    setFilteredSpells(spells)
+  }, [spells])
+  useEffect(() => {
     dispatch(fetchSpellsList({text: "FETCHING SPELLS HERE"}))
-    // setFilteredArr(spells)
   }, [])
+
+  // console.log(spells.map((e) => e.name).toString())
 
   return (
       <DynamicModuleLoader reducers={reducers}>
@@ -59,12 +64,12 @@ const SpellsPage = () => {
                   onChange={onChange}
                   placeholder={"Пошук..."}
               />
-              {/*<Button onClick={onSearchHandler} >Знайти</Button>*/}
+              <Button onClick={onSearchHandler} >Знайти</Button>
               {/*<Button onClick={onLevelSort} >Сортувати за рівнем</Button>*/}
               {/*<Button onClick={() => setFilteredArr(spells)} >SetArray</Button>*/}
             </div>
             {!isLoading && <div className={cls.spellList}>
-              {spells.map((e) =>
+              {filteredSpells.map((e) =>
                   <SpellCard spell={e} onClick={() => setActiveSpell(e)} key={e._id}/>
               )}
             </div>}

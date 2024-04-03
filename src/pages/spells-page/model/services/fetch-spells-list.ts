@@ -13,7 +13,7 @@ export const fetchSpellsList = createAsyncThunk<Spell[], FetchSpellsListProps, T
       const {extra, rejectWithValue} = thunkApi;
       const { text } = props
       try {
-        const response = await extra.api.get<string>('/spells-dices.db', {
+        const response = await extra.external.get<string>('/spells-dices.db', {
           params: {
 
           }
@@ -24,7 +24,7 @@ export const fetchSpellsList = createAsyncThunk<Spell[], FetchSpellsListProps, T
         }
         const splitResponse = response.data.split("\n")
         splitResponse.pop()
-        return splitResponse.map((e: string) => JSON.parse(e)).slice(0, 20)
+        return splitResponse.map((e: string) => JSON.parse(e))
       } catch (e) {
         return rejectWithValue('error when loading spells list')
       }

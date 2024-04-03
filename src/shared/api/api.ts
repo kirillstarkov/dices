@@ -5,3 +5,9 @@ export const $api = axios.create({
   headers: {
   },
 });
+
+export const $extApi = axios.create({
+  baseURL: 'https://raw.githubusercontent.com/kirillstarkov/dnd-pack-ua/main/packs',
+  headers: {
+  },
+});

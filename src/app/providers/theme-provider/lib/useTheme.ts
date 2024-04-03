@@ -16,6 +16,7 @@ export function useTheme(): UseThemeResult {
     } else {
       newTheme = 'app_dark_theme';
     }
+    console.log(theme)
     setTheme(newTheme)
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
   }

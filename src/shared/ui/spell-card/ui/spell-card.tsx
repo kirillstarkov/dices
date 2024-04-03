@@ -9,6 +9,7 @@ export const SpellCard: FC<SpellCardType> = memo((props: SpellCardType) => {
   const { spell, className, onClick} = props;
   const { name, system } = spell
   const { school, level, components } = system;
+
   let spellSchool = ""
   switch (school) {
     case "abj":
@@ -36,7 +37,6 @@ export const SpellCard: FC<SpellCardType> = memo((props: SpellCardType) => {
       spellSchool = "Перетворення";
       break;
   }
-
 
 
   const description =

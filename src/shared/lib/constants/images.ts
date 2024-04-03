@@ -4,5 +4,6 @@ export const imagesPath = assetsPath + "images/"
 
 export const ICONS = {
   moon: iconsPath + "moon.svg",
-  sun: iconsPath + "sun.svg"
+  sun: iconsPath + "sun.svg",
+  logo: iconsPath + "logo.png",
 }

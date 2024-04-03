@@ -1,0 +1,45 @@
+.sectionTitle {
+  font: var(--font-l);
+  font-family: var(--font-family-secondary);
+  font-weight: 600;
+}
+
+.discBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  margin: 0 8px 8px 8px;
+  border-bottom: 1px solid var(--card-bg);
+  cursor: pointer;
+
+  &.inactive {
+    background-color: var(--card-bg);
+    padding: 8px;
+    margin: unset;
+    border-radius: 10px;
+  }
+
+  & .more {
+    font-size: 18px;
+    filter: sepia(1);
+  }
+}
+
+.description {
+  padding: 8px;
+
+  & ul {
+    padding-left: 32px;
+  }
+}
+
+.appDisc {
+  margin-bottom: 24px;
+  font: var(--font-s);
+  font-family: var(--font-family-secondary);
+
+  & b {
+    font-weight: 600;
+  }
+}

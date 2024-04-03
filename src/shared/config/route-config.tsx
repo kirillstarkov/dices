@@ -35,13 +35,13 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.ARMORS]: '/armors',
   [AppRoutes.BACKGROUNDS]: '/backgrounds',
   [AppRoutes.BESTIARY]: '/bestiary',
-  [AppRoutes.CLASSES]: '/classes',
+  [AppRoutes.CLASSES]: '/classes/', // + class name
   [AppRoutes.FEATS]: '/feats',
   [AppRoutes.ITEMS]: '/items',
   [AppRoutes.MAGIC_ITEMS]: '/magic',
   [AppRoutes.MAIN]: '/',
   [AppRoutes.RACES]: '/races',
-  [AppRoutes.SPELLS]: '/spells',
+  [AppRoutes.SPELLS]: '/spells', // + spell name
   [AppRoutes.WEAPONS]: '/weapons',
   [AppRoutes.NOT_FOUND]: '*'
 };
@@ -60,7 +60,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     element: <BestiaryPage />
   },
   [AppRoutes.CLASSES]: {
-    path: RoutePath.classes,
+    path: `${RoutePath.classes}`,
     element: <ClassesPage />
   },
   [AppRoutes.FEATS]: {

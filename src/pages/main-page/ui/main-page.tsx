@@ -23,7 +23,7 @@ const MainPage = () => {
             Передісторії
           </LinkCard>
           <LinkCard to={RoutePath.spells} className={cls.linkCard}>
-            Закляття
+            Чари
           </LinkCard>
           <LinkCard to={RoutePath.weapons} className={cls.linkCard}>
             Зброя

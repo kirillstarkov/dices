@@ -1,0 +1,77 @@
+.classTable {
+  display: flex;
+  width: 100%;
+  border: var(--border-main);
+  border-radius: 6px;
+  overflow: hidden;
+
+  & table {
+    width: 100%;
+    border-spacing: 0;
+    color: var(--primary-color);
+    border-collapse: collapse;
+
+    & td:last-child {
+      border: none;
+    }
+    & th:last-child {
+      border: none;
+    }
+  }
+
+  & thead {
+    background-color: var(--card-active);
+    border-bottom: var(--border-main);
+    & th {
+      font-weight: 500;
+      padding: 4px;
+      border-right: var(--border-main);
+    }
+  }
+
+  & tbody {
+
+    & tr:nth-child(even) {
+      background-color: var(--card-bg);
+    }
+
+    & td {
+      border-right: var(--border-main);
+      height: auto;
+      padding: 4px;
+    }
+  }
+}
+
+.TableL {
+  width: 50%;
+  border: var(--border-main);
+}
+
+.titleRow {
+  display: flex;
+  width: 100%;
+}
+
+.rowL {
+  display: flex;
+  width: 100%;
+}
+
+.lvlCol {
+  width: 30px;
+}
+
+.bmCol {
+  width: 30px;
+}
+
+.featCol {
+  //width: 100%;
+  text-align: left;
+}
+
+.skill {
+  color: var(--primary-color);
+  text-decoration: none;
+}

@@ -1,0 +1,14 @@
+.navLink {
+  width: 100%;
+  color: var(--primary-color);
+  padding: 10px 8px;
+  margin: 2px 0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+
+
+  &:hover, &.active {
+    background-color: var(--card-active);
+  }
+}

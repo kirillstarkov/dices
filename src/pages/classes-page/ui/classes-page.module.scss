@@ -1,0 +1,24 @@
+.classesPage {
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.classLeft {
+  width: 30%;
+}
+
+.classItem {
+  height: 48px;
+  //width: 25%;
+}
+
+.classRight {
+  @media screen and (min-width: 1200px) {
+    width: calc(70% - 24px);
+  }
+}

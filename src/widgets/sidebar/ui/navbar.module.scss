@@ -1,17 +1,38 @@
 .navbar {
-  //height: 100vh;
   border-right: 1px solid rgba(0,0,0,0.1);
   background-color: var(--card-bg);
-  //position: fixed;
-  //left: 0;
   order: 1;
   height: 56px;
+  min-height: 56px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
 
   @media screen and (min-width: 768px) {
+    padding: 8px 0;
     order: 0;
     width: 52px;
     min-width: 52px;
     height: 100%;
     min-height: 100%;
+    flex-direction: column;
+    position: static;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 12px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
   }
 }
