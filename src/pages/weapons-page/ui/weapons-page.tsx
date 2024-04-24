@@ -1,13 +1,10 @@
-import {Page} from "shared/ui/page";
+import { Page } from 'shared/ui/page';
 
-const WeaponsPage = () => {
-
-  return (
-      <Page>
-        <h2>Cторінка з КЛАССАМИ ВАУ</h2>
-        <p>Тут буде меню з КЛАССАМИ</p>
-      </Page>
-  );
-};
+const WeaponsPage = () => (
+  <Page>
+    <h2>Cторінка з КЛАССАМИ ВАУ</h2>
+    <p>Тут буде меню з КЛАССАМИ</p>
+  </Page>
+);
 
 export default WeaponsPage;

@@ -1,8 +1,7 @@
-import React, {FC, memo} from 'react';
-import cn from "classnames";
-import cls from './button.module.scss'
-import {ButtonProps} from "./button.types";
-
+import React, { FC, memo } from 'react';
+import cn from 'classnames';
+import cls from './button.module.scss';
+import { ButtonProps } from './button.types';
 
 export const Button: FC<ButtonProps> = memo((props: ButtonProps) => {
   const {
@@ -10,13 +9,13 @@ export const Button: FC<ButtonProps> = memo((props: ButtonProps) => {
   } = props;
 
   return (
-      <button
-          disabled={disabled}
-          type="button"
-          className={cn(cls.button, cls[theme], cls[size], className)}
-          {...otherProps}
-      >
-        {children}
-      </button>
+    <button
+      disabled={disabled}
+      type="button"
+      className={cn(cls.button, cls[theme], cls[size], className)}
+      {...otherProps}
+    >
+      {children}
+    </button>
   );
 });

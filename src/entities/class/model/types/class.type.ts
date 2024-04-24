@@ -1,4 +1,4 @@
-import {ReactNode} from "react";
+import { ReactNode } from 'react';
 
 export type ClassTitle = 'Бард' | 'Варвар' | 'Винахідник' | 'Воїн' | 'Друїд' | 'Жрець' | 'Заклинач' | 'Монах' | 'Паладин' | 'Пройдисвіт' | 'Рейнджер' | 'Чарівник' | 'Чорнокнижник'
 

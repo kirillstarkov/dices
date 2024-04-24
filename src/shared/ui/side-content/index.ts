@@ -1,1 +1,1 @@
-export { ContentSide } from './ui/content-side'
+export { ContentSide } from './ui/content-side';

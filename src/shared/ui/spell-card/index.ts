@@ -1,1 +1,1 @@
-export { SpellCard } from './ui/spell-card'
+export { SpellCard } from './ui/spell-card';

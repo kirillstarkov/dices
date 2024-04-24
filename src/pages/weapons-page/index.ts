@@ -1,1 +1,1 @@
-export { WeaponsPageLazy as WeaponsPage } from './ui/weapons-page.lazy'
+export { WeaponsPageLazy as WeaponsPage } from './ui/weapons-page.lazy';

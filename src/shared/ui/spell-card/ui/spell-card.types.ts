@@ -1,4 +1,4 @@
-import {Spell} from "entities/spell";
+import { Spell } from 'entities/spell';
 
 export interface SpellCardProps {
   spell: Spell;

@@ -1,4 +1,4 @@
-import {LinkProps} from "react-router-dom";
+import { LinkProps } from 'react-router-dom';
 
 export interface LinkCardProps extends LinkProps{
   children: React.ReactNode;

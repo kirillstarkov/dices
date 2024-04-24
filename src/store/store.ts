@@ -3,15 +3,14 @@ import {
 } from '@reduxjs/toolkit';
 import { NavigateOptions, To } from 'react-router-dom';
 import { counterReducer } from 'entities/counter';
-import {createReducerManager} from "store/config/reducer-manager";
-import {StateSchema} from "store/config/state-schema";
-import { $api, $extApi } from "shared/api/api";
-
+import { createReducerManager } from 'store/config/reducer-manager';
+import { StateSchema } from 'store/config/state-schema';
+import { $api, $extApi } from 'shared/api/api';
 
 export function createReduxStore(
-    initialState?: StateSchema,
-    asyncReducers?: ReducersMapObject<StateSchema>,
-    navigate?: (to: To, options?: NavigateOptions) => void,
+  initialState?: StateSchema,
+  asyncReducers?: ReducersMapObject<StateSchema>,
+  navigate?: (to: To, options?: NavigateOptions) => void,
 ) {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,

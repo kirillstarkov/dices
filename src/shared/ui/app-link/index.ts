@@ -1,1 +1,1 @@
-export { AppLink } from './ui/app-link'
+export { AppLink } from './ui/app-link';

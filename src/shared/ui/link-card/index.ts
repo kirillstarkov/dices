@@ -1,1 +1,1 @@
-export {LinkCard} from './ui/link-card'
+export { LinkCard } from './ui/link-card';

@@ -1,17 +1,16 @@
-import {createEntityAdapter, createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {Spell} from "entities/spell/";
-import {SpellsPageSchema} from "pages/spells-page";
-import {fetchSpellsList} from "pages/spells-page/model/services/fetch-spells-list";
-import {StateSchema} from "store/config/state-schema";
-import {FetchedSpells} from "entities/spell/model/types/spell.type";
+import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Spell } from 'entities/spell/';
+import { SpellsPageSchema } from 'pages/spells-page';
+import { fetchSpellsList } from 'pages/spells-page/model/services/fetch-spells-list';
+import { StateSchema } from 'store/config/state-schema';
 
 const spellsAdapter = createEntityAdapter<Spell>({
-  selectId: (spell) => spell._id
-})
+  selectId: (spell) => spell._id,
+});
 
 export const getSpells = spellsAdapter.getSelectors<StateSchema>(
-    (state) => state.spellsPage || spellsAdapter.getInitialState()
-)
+  (state) => state.spellsPage || spellsAdapter.getInitialState(),
+);
 
 const spellsPageSlice = createSlice({
   name: 'spellsPageSlice',
@@ -20,25 +19,25 @@ const spellsPageSlice = createSlice({
     error: undefined,
     ids: [],
     entities: {
-    }
+    },
   }),
   reducers: {
   },
   extraReducers: (builder) => {
     builder
-        .addCase(fetchSpellsList.pending, (state) => {
-          state.error = undefined
-          state.isLoading = true
-        })
-        .addCase(fetchSpellsList.fulfilled, (state, action: PayloadAction<Spell[]>) => {
-          state.isLoading = false;
-          spellsAdapter.setAll(state, action.payload)
-        })
-        .addCase(fetchSpellsList.rejected, (state, action) => {
-          state.isLoading = false;
-          state.error = action.payload;
-        });
-  }
+      .addCase(fetchSpellsList.pending, (state) => {
+        state.error = undefined;
+        state.isLoading = true;
+      })
+      .addCase(fetchSpellsList.fulfilled, (state, action: PayloadAction<Spell[]>) => {
+        state.isLoading = false;
+        spellsAdapter.setAll(state, action.payload);
+      })
+      .addCase(fetchSpellsList.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
+  },
 });
 
 export const { reducer: spellsPageReducer, actions: spellsPageActions } = spellsPageSlice;

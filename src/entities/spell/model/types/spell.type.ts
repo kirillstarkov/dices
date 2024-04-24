@@ -1,12 +1,13 @@
 export type ActivationType = 'action' | 'bonus' | 'reaction' | 'minute' | 'hour'
 export type DurationUnitType = 'inst' | 'round' | 'minute' | 'hour' | 'day'
 export type SpellSchool = 'trs' | 'con' | 'evo' | 'div' | 'nec' | 'abj' | 'ill' | 'enc'
+export type SpellLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 
 export interface SpellComponents {
   vocal: boolean;
   somatic: boolean;
-  material:	boolean;
-  ritual:	boolean;
+  material: boolean;
+  ritual: boolean;
   concentration: boolean;
 
 }
@@ -48,18 +49,18 @@ export interface SpellSystem {
     dc: string;
     scaling: string;
   }
-  level: number;
+  level: SpellLevel;
   school: SpellSchool;
   components: SpellComponents;
   materials: {
-    value	:	string;
-    consumed	:	boolean;
+    value: string;
+    consumed: boolean;
     cost: number;
     supply: number;
   };
   scaling: {
-    mode:	string
-    formula:	string
+    mode: string;
+    formula: string;
   }
 }
 

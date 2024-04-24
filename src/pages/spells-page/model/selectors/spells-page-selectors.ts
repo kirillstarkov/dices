@@ -1,4 +1,5 @@
-import {StateSchema} from "store/config/state-schema";
+import { StateSchema } from 'store/config/state-schema';
+import { buildSelector } from 'shared/lib/store';
 
-export const getSpellsPageIsLoading = (state: StateSchema) => state.spellsPage?.isLoading || false;
-export const getSpellsPageError = (state: StateSchema) => state.spellsPage?.error
+export const [useSpellsPageIsLoading, getSpellsPageIsLoading] = buildSelector((state) => state.spellsPage?.isLoading);
+export const getSpellsPageError = (state: StateSchema) => state.spellsPage?.error;

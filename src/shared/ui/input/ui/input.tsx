@@ -1,8 +1,7 @@
-import React, {FC, memo} from 'react';
-import cn from "classnames";
-import cls from './input.module.scss'
-import {InputType} from "./input.types";
-
+import React, { FC, memo } from 'react';
+import cn from 'classnames';
+import cls from './input.module.scss';
+import { InputType } from './input.types';
 
 export const Input: FC<InputType> = memo((props: InputType) => {
   const {
@@ -14,13 +13,13 @@ export const Input: FC<InputType> = memo((props: InputType) => {
   };
 
   return (
-      <input
-        value={value}
-        onChange={onChangeHandler}
-        placeholder={placeholder}
-        readOnly={readOnly}
-        type={type}
-        className={cn(className, cls.input)}
-      />
+    <input
+      value={value}
+      onChange={onChangeHandler}
+      placeholder={placeholder}
+      readOnly={readOnly}
+      type={type}
+      className={cn(className, cls.input)}
+    />
   );
 });

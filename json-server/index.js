@@ -36,7 +36,6 @@ server.post('/login', (req, res) => {
 });
 
 // check authorization
-// eslint-disable-next-line consistent-return
 server.use((req, res, next) => {
   next();
 });

@@ -1,5 +1,4 @@
-import {createContext} from "react";
-
+import { createContext } from 'react';
 
 export type Theme = 'app_dark_theme' | 'app_light_theme';
 
@@ -9,6 +8,6 @@ export interface ThemeContextProps {
 }
 
 // @ts-ignore
-export const ThemeContext = createContext<ThemeContextProps>({})
+export const ThemeContext = createContext<ThemeContextProps>({});
 
 export const LOCAL_STORAGE_THEME_KEY = 'theme';

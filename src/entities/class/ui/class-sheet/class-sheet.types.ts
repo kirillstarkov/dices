@@ -1,4 +1,4 @@
-import {IClass} from "entities/class";
+import { IClass } from 'entities/class';
 
 export interface ClassSheetProps {
   charClass: IClass

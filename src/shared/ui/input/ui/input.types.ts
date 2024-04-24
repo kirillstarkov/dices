@@ -1,4 +1,4 @@
-import {InputHTMLAttributes} from "react";
+import { InputHTMLAttributes } from 'react';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 

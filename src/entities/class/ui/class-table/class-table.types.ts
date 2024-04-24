@@ -1,4 +1,4 @@
-import {ClassTitle, IFeature} from "entities/class/model/types/class.type";
+import { ClassTitle, IFeature } from 'entities/class/model/types/class.type';
 
 interface ClassTableProps {
   featuresArr: IFeature[][]

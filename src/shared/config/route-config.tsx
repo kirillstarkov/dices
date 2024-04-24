@@ -1,16 +1,16 @@
-import {MainPage} from "pages/main-page";
-import {SpellsPage} from "pages/spells-page";
-import {ClassesPage} from "pages/classes-page";
-import {ItemsPage} from "pages/items-page";
-import {MagicPage} from "pages/magic-page";
-import {NotFoundPage} from "pages/not-found-page";
-import {RouteProps} from "react-router-dom";
-import {ArmorsPage} from "pages/armors-page";
-import {BackgroundsPage} from "pages/backgrounds-page";
-import {BestiaryPage} from "pages/bestiary-page";
-import {FeatsPage} from "pages/feats-page";
-import {RacesPage} from "pages/races-page";
-import {WeaponsPage} from "pages/weapons-page";
+import { MainPage } from 'pages/main-page';
+import { SpellsPage } from 'pages/spells-page';
+import { ClassesPage } from 'pages/classes-page';
+import { ItemsPage } from 'pages/items-page';
+import { MagicPage } from 'pages/magic-page';
+import { NotFoundPage } from 'pages/not-found-page';
+import { RouteProps } from 'react-router-dom';
+import { ArmorsPage } from 'pages/armors-page';
+import { BackgroundsPage } from 'pages/backgrounds-page';
+import { BestiaryPage } from 'pages/bestiary-page';
+import { FeatsPage } from 'pages/feats-page';
+import { RacesPage } from 'pages/races-page';
+import { WeaponsPage } from 'pages/weapons-page';
 
 export type AppRoutesProps = RouteProps & {
   authOnly?: boolean;
@@ -43,56 +43,56 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.RACES]: '/races',
   [AppRoutes.SPELLS]: '/spells', // + spell name
   [AppRoutes.WEAPONS]: '/weapons',
-  [AppRoutes.NOT_FOUND]: '*'
+  [AppRoutes.NOT_FOUND]: '*',
 };
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.ARMORS]: {
     path: RoutePath.armors,
-    element: <ArmorsPage />
+    element: <ArmorsPage />,
   },
   [AppRoutes.BACKGROUNDS]: {
     path: RoutePath.backgrounds,
-    element: <BackgroundsPage />
+    element: <BackgroundsPage />,
   },
   [AppRoutes.BESTIARY]: {
     path: RoutePath.bestiary,
-    element: <BestiaryPage />
+    element: <BestiaryPage />,
   },
   [AppRoutes.CLASSES]: {
     path: `${RoutePath.classes}`,
-    element: <ClassesPage />
+    element: <ClassesPage />,
   },
   [AppRoutes.FEATS]: {
     path: RoutePath.feats,
-    element: <FeatsPage />
+    element: <FeatsPage />,
   },
   [AppRoutes.ITEMS]: {
     path: RoutePath.items,
-    element: <ItemsPage />
+    element: <ItemsPage />,
   },
   [AppRoutes.MAGIC_ITEMS]: {
     path: RoutePath.magic_items,
-    element: <MagicPage />
+    element: <MagicPage />,
   },
   [AppRoutes.MAIN]: {
     path: RoutePath.main,
-    element: <MainPage />
+    element: <MainPage />,
   },
   [AppRoutes.RACES]: {
     path: RoutePath.races,
-    element: <RacesPage />
+    element: <RacesPage />,
   },
   [AppRoutes.SPELLS]: {
     path: RoutePath.spells,
-    element: <SpellsPage />
+    element: <SpellsPage />,
   },
   [AppRoutes.WEAPONS]: {
     path: RoutePath.weapons,
-    element: <WeaponsPage />
+    element: <WeaponsPage />,
   },
   [AppRoutes.NOT_FOUND]: {
     path: RoutePath.not_found,
-    element: <NotFoundPage />
+    element: <NotFoundPage />,
   },
-}
+};

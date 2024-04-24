@@ -1,14 +1,15 @@
-import {AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject, Dispatch} from "@reduxjs/toolkit";
-import {AxiosInstance} from "axios";
-import {NavigateOptions, To} from "react-router-dom";
-import {SpellsPageSchema} from "pages/spells-page";
-import { CounterScheme } from 'entities/counter'
-import {ClassesPageSchema} from "pages/classes-page/model/types/classes-page-schema";
-
+import {
+  AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject, Dispatch,
+} from '@reduxjs/toolkit';
+import { AxiosInstance } from 'axios';
+import { NavigateOptions, To } from 'react-router-dom';
+import { SpellsPageSchema } from 'pages/spells-page';
+import { CounterScheme } from 'entities/counter';
+import { ClassesPageSchema } from 'pages/classes-page/model/types/classes-page-schema';
 
 export interface StateSchema {
   counter: CounterScheme
-  //Async reducers
+  // Async reducers
   spellsPage?: SpellsPageSchema;
   classesPage?: ClassesPageSchema;
 }
